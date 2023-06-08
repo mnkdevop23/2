@@ -1,0 +1,562 @@
+@media (max-width: 1850px) {
+    .header::after {
+        background-size: 85%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .header::after {
+        background-size: 75%;
+        right: 70px;
+    }
+
+    .header__content__bottom p {
+        font-size: 36px;
+    }
+
+    .about__wrapper {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .header::after {
+        background-size: 70%;
+        right: 40px;
+    }
+
+    .header__content__center div {
+        font-size: 29px;
+    }
+
+    .header__content__center h1 {
+        font-size: 60px;
+    }
+
+    .header__content__center p {
+        font-size: 45px;
+    }
+
+    .header__button {
+        max-width: 600px;
+    }
+
+    .header__content__bottom p {
+        font-size: 30px;
+    }
+
+    .header__next-button {
+        right: 10px;
+    }
+
+    .arrow {
+        width: 33px;
+        bottom: -53px;
+    }
+
+    .arrow-prev {
+        left: 0;
+    }
+
+    .arrow-next {
+        right: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .scenario .container {
+        max-width: unset;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .scenario__item-second:after {
+        content: none;
+    }
+
+    .scenario__item-second .scenario__item__bottom p:last-child {
+        max-width: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .header__content__top {
+        padding-bottom: 85px;
+    }
+
+    .header__content__center div {
+        font-size: 26px;
+    }
+
+    .header__content__center h1 {
+        font-size: 48px;
+    }
+
+    .header__content__center p {
+        font-size: 39px;
+        line-height: 49px;
+    }
+
+    .header__content__center {
+        padding-bottom: 138px;
+    }
+
+    .header__button {
+        max-width: 500px;
+        height: 90px
+    }
+
+    .header__button .download-button__text {
+        font-size: 34px;
+    }
+
+    .header__content__bottom p {
+        max-width: 400px;
+    }
+
+    .slick-initialized .slick-slide div {
+        text-align: center;
+    }
+
+    .course-descr__wrapper {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .course-descr__images {
+        width: 100%;
+        padding-bottom: 28px;
+    }
+
+    .course-descr__images img:last-child {
+        margin-left: 0;
+    }
+
+    .course-descr__title-mob {
+        display: block;
+    }
+
+    .about:after {
+        right: 0;
+    }
+
+    .footer__block__top {
+        font-size: 26px;
+    }
+
+    .footer__block__title {
+        font-size: 43px;
+    }
+
+    .footer__block__subtitle p {
+        font-size: 36px;
+    }
+
+    .footer__block__bottom {
+        font-size: 27px;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-man-mob,
+    .header__content__top p br,
+    .header__content__center div br {
+        display: none;
+    }
+
+    .about-img-mob {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    /*.header__next-button,*/
+    .header__content__top p span {
+        display: none !important;
+    }
+    .header__next-button {
+        bottom: 460px;
+    }
+    .header__next-button p {
+         display: none;
+     }
+    .header {
+        text-align: center;
+        padding: 24px 16px 0;
+        background: url("../vid_img/header-background-mob.jpg") center no-repeat;
+        background-size: cover;
+    }
+
+    .header::after {
+        content: none;
+    }
+
+    .header__content__top {
+        padding-bottom: 34px;
+    }
+
+    .header__content__top div {
+        padding-bottom: 9px;
+    }
+
+    .header__content__top p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .header__content__center {
+        padding-bottom: 16px;
+    }
+
+    .header__content__center div {
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 12px;
+    }
+
+    .header__content__center h1 {
+        font-size: 22px;
+        line-height: 25px;
+        padding: 13px 14px;
+    }
+
+    .header__content__center p {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .header__content__bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .header__content__bottom p {
+        font-weight: 900;
+        font-size: 19px;
+        line-height: 24px;
+        padding-top: 0;
+        margin-bottom: 40px;
+    }
+
+    .header__content__bottom p span::before {
+        left: 0;
+        width: 100%;
+    }
+
+    .header__button {
+        max-width: 329px;
+        height: 55.5px;
+    }
+
+    .header__button .download-button__text {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .header__button .download-button__icon {
+        width: 29.5px;
+        height: 29.5px;
+    }
+
+    .header-man-mob {
+        padding-top: 45px;
+    }
+
+    .steps__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .steps__bottom p {
+        padding-bottom: 44px;
+    }
+
+    .about {
+        padding: 63px 20px 0;
+    }
+
+    .about:after {
+        content: none;
+    }
+
+    .about__title {
+        text-align: center;
+        line-height: 37px;
+    }
+
+    .about__title:after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about__title h3 span {
+        display: block;
+    }
+
+    .about__wrapper {
+        padding-bottom: 44px;
+    }
+
+    .about__quote span {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .footer__wrapper {
+        padding: 54px 0 0;
+    }
+
+    .footer__wrapper .container {
+        flex-direction: column;
+    }
+
+    .footer__block {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+    .footer__block__top {
+        font-size: 29px;
+        line-height: 30px;
+        letter-spacing: 0.305em;
+        padding-bottom: 20px;
+    }
+
+    .footer__block__title {
+        font-size: 26.6105px;
+        line-height: 30px;
+        padding: 6px;
+        margin-bottom: 20px;
+    }
+
+    .footer__block__subtitle p {
+        font-size: 22.6207px;
+        line-height: 25px;
+    }
+
+    .footer__block__bottom {
+        font-size: 21.7688px;
+        line-height: 27px;
+    }
+
+    .footer__form-wrapper {
+        border-radius: 0;
+    }
+
+    .footer__text {
+        padding: 21px 15px 30px;
+    }
+
+    .footer__text p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .floating-menu,
+    .dream-item-3 p br,
+    .course-descr__title,
+    .about__wrapper p span br {
+        display: none !important;
+    }
+
+    .dreams {
+        padding: 48px 0 53px;
+    }
+
+    .site_title {
+        margin-bottom: 45px;
+    }
+
+    .steps .site_title h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+        max-width: 360px;
+        margin: 0 auto;
+        padding-bottom: 9px;
+    }
+
+    .steps .site_title p {
+        font-size: 14px;
+        line-height: 18px;
+        max-width: 255px;
+        margin: 0 auto;
+    }
+
+    .steps .site_title:after {
+        content: none;
+    }
+
+    .steps-wrapper {
+        padding: 0 6px;
+        background: none;
+    }
+
+    .steps__list {
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 36px 29px 51px 31px;
+    }
+
+    .step-item {
+        padding: 68px 20px 35px;
+        background: #FAFAFA;
+        box-shadow: 2.16354 e-15px 26px 46px rgba(50, 50, 50, 0.1035), inset -4.85595 e-16px -7.93037px 7.93037px #F0F0F0, inset 4.85595 e-16px 7.93037px 7.93037px #FFFFFF;
+    }
+
+    .steps__button {
+        max-width: 311px;
+        height: 53px;
+    }
+
+    .steps__button .download-button__text {
+        font-size: 18.9058px;
+        line-height: 24px;
+    }
+
+    .steps__button .download-button__icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .course-descr {
+        padding: 39px 0 48px;
+    }
+
+    .course-descr__list li {
+        padding-bottom: 10px;
+    }
+
+    .course-descr__list li span {
+        line-height: 22px;
+    }
+
+    .reviews {
+        padding: 43px 0 74px;
+    }
+
+    .reviews__title {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .reviews__title h3 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .reviews__list {
+        margin-top: 47px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .reviews__item-top__member {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    .reviews__item-top__member img {
+        margin-bottom: 10px;
+    }
+
+    .reviews__item-top {
+        padding: 26px 11px 23px;
+    }
+
+    .reviews__item-bottom {
+        padding: 29px 14px 19px 11px;
+    }
+
+    .slick-dots {
+        bottom: -40px;
+    }
+
+    .slick-dots li button:before,
+    .slick-dots li.slick-active button:before {
+        width: 40px;
+    }
+
+    .slick-dotted.slick-slider {
+        margin-bottom: 64px;
+    }
+
+    .reviews__text {
+        padding-bottom: 30px;
+    }
+
+    .reviews__bottom {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 25px 20px 35px 20px;
+    }
+
+    .scenario__wrapper {
+        flex-direction: column;
+        border-radius: 0;
+    }
+
+    .scenario__item {
+        min-height: auto;
+        width: 100%;
+    }
+
+    .scenario__item-second {
+        padding-bottom: 90px;
+    }
+
+    .scenario__item-second:after {
+        right: -45px;
+    }
+}
+
+@media (max-width: 575px) {
+    .dream-item {
+        min-height: 183px;
+        padding: 18px 12px 0 8px;
+        background-size: 100%;
+    }
+
+    .dream-item p {
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .arrow-prev {
+        left: 15px;
+    }
+
+    .arrow-next {
+        right: 15px;
+    }
+
+    .slick-dots {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .scenario {
+        padding-bottom: 0;
+    }
+
+    .footer__wrapper .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer__block {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .footer__form-wrapper {
+        max-width: 100%;
+    }
+}

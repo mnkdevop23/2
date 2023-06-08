@@ -1,0 +1,930 @@
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base href="." />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>QuantumAI</title>
+
+    <link rel="stylesheet" href="./assetsd/app.css" />
+    <link rel="stylesheet" href="./assetsd/quantum.css" />
+    <link rel="stylesheet" href="./assetsd/animate.min.css" />
+    <link id="aos-style-link" href="./assetsd/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assetsd/style.css" />
+    <link rel="stylesheet" href="./assetsd/html.css" />
+    <link rel="stylesheet" href="./assetsd/trades.css" />
+    <link rel="stylesheet" href="./assetsd/custom.css" />
+
+    <!-- Pixel -->
+    <meta name="pixel_id" content="" />
+    <!--  Pixel Code -->
+
+    <link rel="stylesheet" href="./form/bundle.css" />
+    <script defer="" src="./form/bundle.js"></script>
+
+    <!-- End  Pixel Code -->
+    <style type="text/css">
+      .vue-modal-resizer {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        right: 0;
+        bottom: 0;
+        z-index: 9999999;
+        background: transparent;
+        cursor: se-resize;
+      }
+      .vue-modal-resizer::after {
+        display: block;
+        position: absolute;
+        content: "";
+        background: transparent;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #ddd;
+        border-left: 10px solid transparent;
+      }
+      .vue-modal-resizer.clicked::after {
+        border-bottom: 10px solid #369be9;
+      }
+    </style>
+    <style type="text/css">
+      .v--modal-block-scroll {
+        overflow: hidden;
+        width: 100vw;
+      }
+      .v--modal-overlay {
+        position: fixed;
+        box-sizing: border-box;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        opacity: 1;
+      }
+      .v--modal-overlay.scrollable {
+        height: 100%;
+        min-height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .v--modal-overlay .v--modal-background-click {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+      }
+      .v--modal-overlay .v--modal-box {
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .v--modal-overlay.scrollable .v--modal-box {
+        margin-bottom: 2px;
+      }
+      .v--modal {
+        background-color: white;
+        text-align: left;
+        border-radius: 3px;
+        box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+        padding: 0;
+      }
+      .v--modal.v--modal-fullscreen {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        left: 0;
+        top: 0;
+      }
+      .v--modal-top-right {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .overlay-fade-enter-active,
+      .overlay-fade-leave-active {
+        transition: all 0.2s;
+      }
+      .overlay-fade-enter,
+      .overlay-fade-leave-active {
+        opacity: 0;
+      }
+      .nice-modal-fade-enter-active,
+      .nice-modal-fade-leave-active {
+        transition: all 0.4s;
+      }
+      .nice-modal-fade-enter,
+      .nice-modal-fade-leave-active {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    </style>
+    <style type="text/css">
+      .vue-dialog div {
+        box-sizing: border-box;
+      }
+      .vue-dialog .dialog-flex {
+        width: 100%;
+        height: 100%;
+      }
+      .vue-dialog .dialog-content {
+        flex: 1 0 auto;
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+      }
+      .vue-dialog .dialog-c-title {
+        font-weight: 600;
+        padding-bottom: 15px;
+      }
+      .vue-dialog .dialog-c-text {
+      }
+      .vue-dialog .vue-dialog-buttons {
+        display: flex;
+        flex: 0 1 auto;
+        width: 100%;
+        border-top: 1px solid #eee;
+      }
+      .vue-dialog .vue-dialog-buttons-none {
+        width: 100%;
+        padding-bottom: 15px;
+      }
+      .vue-dialog-button {
+        font-size: 12px !important;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        cursor: pointer;
+        box-sizing: border-box;
+        line-height: 40px;
+        height: 40px;
+        color: inherit;
+        font: inherit;
+        outline: none;
+      }
+      .vue-dialog-button:hover {
+        background: rgba(0, 0, 0, 0.01);
+      }
+      .vue-dialog-button:active {
+        background: rgba(0, 0, 0, 0.025);
+      }
+      .vue-dialog-button:not(:first-of-type) {
+        border-left: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body
+    data-aos-easing="ease"
+    data-aos-duration="400"
+    data-aos-delay="0"
+    style="overflow: auto">
+    <nav class="mobile-nav">
+      <div class="mobile-nav__wrap">
+        <a class="button button--sm" href="javascript:void(0)">Sign in</a>
+      </div>
+    </nav>
+
+    <header class="header header--sticky">
+      <div class="header__wrapper">
+        <div
+          class="header__logo aos-init aos-animate"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          onclick="scrollToForm()">
+          <svg width="140" height="62" viewBox="0 0 124.2 42">
+            <path
+              d="M52.2,14.7c0.1,0.1,0.4,0.3,0.7,0.3c0.5,0,1.1-0.4,1.1-1.1v-2c0-2.8-2.2-5.2-5.2-5.2h-3.7V3c0-0.9-0.4-1.7-1.2-2.4
+                c-0.7-0.5-1.6-0.8-2.5-0.7L10,6.9c-2.4,0.4-4.2,2.5-4.2,5v25c0,2.8,2.2,5.2,5.2,5.2h38c2.8,0,5.2-2.2,5.2-5.2v-2.4
+                c0-0.3-0.1-0.5-0.3-0.7c-0.1-0.1-0.4-0.3-0.7-0.3c-0.5,0-1.1,0.4-1.1,1.1V37c0,1.7-1.5,3-3,3H10.9c-1.7,0-3-1.3-3-3V11.9
+                c0-1.6,1.2-2.8,2.6-3c0.1,0,0.3,0,0.5,0h38c1.7,0,3,1.3,3,3V14C52,14.3,52.1,14.5,52.2,14.7 M20,6.7L41.9,2c0.3,0,0.7,0,0.8,0.3
+                C43,2.4,43.1,2.8,43.1,3v3.7C43.1,6.7,20,6.7,20,6.7z"></path>
+            <path
+              d="M25.4,32c-2-0.5-4-1.1-5.7-1.7c-0.3-0.1-0.6-0.2-0.9-0.2c-3.5-0.1-6.5-2.7-6.5-7.5c0-4.8,2.9-7.8,6.9-7.8
+                c4,0,6.6,3.1,6.6,7.5c0,3.8-1.8,6.2-4.2,7.1v0.1c1.5,0.4,3.1,0.7,4.3,0.9L25.4,32z M23.8,22.4c0-3-1.5-6-4.7-6c-3.2,0-4.8,3-4.8,6.2
+                c0,3.1,1.7,6,4.7,6C22.1,28.5,23.8,25.8,23.8,22.4z"></path>
+            <path
+              d="M37.6,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2h1.9v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"></path>
+            <path
+              d="M47,29.9l-0.2-1.3h-0.1c-0.6,0.8-1.7,1.6-3.3,1.6c-2.2,0-3.3-1.5-3.3-3.1c0-2.6,2.3-4,6.4-4v-0.2c0-0.9-0.2-2.5-2.4-2.5
+                c-1,0-2,0.3-2.8,0.8L41,19.9c0.9-0.6,2.2-0.9,3.5-0.9c3.3,0,4,2.2,4,4.4v4c0,0.9,0,1.8,0.2,2.6H47z M46.7,24.4
+                c-2.1,0-4.5,0.3-4.5,2.4c0,1.3,0.8,1.8,1.8,1.8c1.4,0,2.3-0.9,2.6-1.8c0.1-0.2,0.1-0.4,0.1-0.6V24.4z"></path>
+            <path
+              d="M52.1,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.8h0c0.5-1,1.8-2,3.5-2c1.5,0,3.8,0.9,3.8,4.5v6.4h-1.9v-6.1c0-1.7-0.6-3.1-2.5-3.1
+                c-1.3,0-2.3,0.9-2.6,2c-0.1,0.2-0.1,0.6-0.1,0.9v6.4h-1.9V22.1z"></path>
+            <path
+              d="M66.9,16.2v3.1h2.8v1.5h-2.8v5.7c0,1.3,0.4,2.1,1.5,2.1c0.5,0,0.9-0.1,1.1-0.1l0.1,1.5c-0.4,0.2-1,0.3-1.7,0.3
+                c-0.9,0-1.6-0.3-2.1-0.8c-0.5-0.6-0.7-1.5-0.7-2.8v-5.8h-1.7v-1.5H65v-2.6L66.9,16.2z"></path>
+            <path
+              d="M81.1,27c0,1.1,0,2.1,0.1,2.9h-1.7l-0.1-1.7h0c-0.5,0.9-1.6,2-3.5,2c-1.7,0-3.7-0.9-3.7-4.7v-6.2H74v5.9
+                c0,2,0.6,3.4,2.4,3.4c1.3,0,2.2-0.9,2.6-1.8c0.1-0.3,0.2-0.6,0.2-1v-6.5h1.9V27z"></path>
+            <path
+              d="M84.7,22.1c0-1.1,0-2-0.1-2.9h1.7l0.1,1.7h0.1c0.6-1,1.6-2,3.3-2c1.5,0,2.6,0.9,3,2.1h0c0.3-0.6,0.7-1.1,1.2-1.4
+                c0.6-0.5,1.3-0.7,2.4-0.7c1.4,0,3.5,0.9,3.5,4.6v6.3H98v-6c0-2-0.7-3.3-2.3-3.3c-1.1,0-2,0.8-2.3,1.8c-0.1,0.3-0.2,0.6-0.2,1v6.6
+                h-1.9v-6.4c0-1.7-0.7-2.9-2.2-2.9c-1.2,0-2.1,1-2.4,1.9c-0.1,0.3-0.2,0.6-0.2,0.9v6.4h-1.9V22.1z"></path>
+            <path
+              d="M105.8,25.2l-1.5,4.7h-2l5-14.8h2.3l5.1,14.8h-2l-1.6-4.7H105.8z M110.7,23.7l-1.5-4.3c-0.3-1-0.6-1.8-0.8-2.7h0
+                c-0.2,0.9-0.5,1.8-0.7,2.7l-1.5,4.3H110.7z"></path>
+            <path d="M119.1,15v14.8h-1.9V15H119.1z"></path>
+          </svg>
+        </div>
+        <nav class="header__nav"></nav>
+        <div
+          class="header__user aos-init aos-animate"
+          data-aos="fade-zoom-in"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          data-aos-delay="1050">
+          <a
+            class="header__auth button button--sm"
+            href="javascript:void(0)"
+            onclick="scrollToForm()"
+            >Create account</a
+          >
+        </div>
+        <button
+          class="header__hamburger hamburger hamburger--emphatic"
+          type="button">
+          <a
+            class="header__auth button button--sm"
+            href="javascript:void(0)"
+            onclick="scrollToForm()"
+            >Create account</a
+          >
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="section promo promo-main">
+        <div class="wrapper">
+          <div class="promo__wrap">
+            <div class="promo__head">
+              <h1
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                class="aos-init aos-animate">
+                Smart Investing That Makes You $1500 in 5 Hours And Cures
+                Poverty
+              </h1>
+              <p
+                data-aos="fade-right"
+                data-aos-offset="200"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out"
+                class="aos-init aos-animate">
+                Our smart investing can make you thousands in less than 7 days,
+                and will help cure poverty while you earn!
+              </p>
+            </div>
+            <div class="promo__svg">
+              <div class="video">
+                <video
+                  controls="controls"
+                  poster="./assetsd/poster.png"
+                  style="max-width: 100%; height: auto"
+                  width="100%"
+                  height="100%"
+                  allowfullscreen="">
+                  <source src="./assetsd/video.mp4" type="video/mp4" />
+                </video>
+                <div class="play-btn"></div>
+              </div>
+            </div>
+          </div>
+          <div class="promo__middle">
+            <div
+              class="promo__middle-left aos-init form-div aos-animate"
+              data-aos-offset="-200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="700">
+              <h2>SIGN UP FOR FREE</h2>
+              <div>
+                <div id="form-register-lead"></div>
+              </div>
+            </div>
+            <div
+              class="promo__middle-right aos-init aos-animate"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-offset="-200"
+              data-aos-delay="900">
+              <a class="ios-button" href="javascript:void(0)">
+                <div class="ios-button__img">
+                  <img
+                    class="lozad"
+                    data-src="/quantum-ai/img/apple-logo.png"
+                    src="./assetsd/qce_logo_150dpi.png"
+                    data-loaded="true" />
+                </div>
+                <div class="ios-button__text">
+                  <span>World's first Quantum computer</span>
+                  <span>is now LIVE!</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="promo__footer aos-init aos-animate"
+          style="display: none"
+          data-aos="fade-up"
+          data-aos-offset="0"
+          data-aos-delay="800"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out">
+          <div class="promo__info wrapper">
+            <div id="live-trades" class="trades-wrapper active">
+              <div class="trades-div">
+                <div class="live-trades">
+                  <div
+                    v-for="trade of currentTrades"
+                    :id="trade.id"
+                    class="item animated slideInRight">
+                    <div class="ava">
+                      <img
+                        :src="&#39;/quantum-ai/quantum-ai/trades/img/traders/&#39;+trade.img"
+                        alt="" />
+                    </div>
+                    <div class="info">
+                      <div class="won-info">
+                        <b>{{trade.name}}</b> won ${{trade.lastwon}}
+                      </div>
+                      <div class="balance-info">
+                        <b
+                          >Current balance: $<span class="bal"
+                            >{{trade.balance}}</span
+                          ></b
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solution">
+        <h2 class="visually-hidden">Solution</h2>
+        <div class="solution__top wrapper" id="problem">
+          <p
+            class="solution__title aos-init"
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out">
+            Problem
+          </p>
+          <div class="solution__top-wrap">
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                class="aos-init">
+                <span>1</span>
+                <p>
+                  Poverty is a global issue, one which we aim to solve –
+                  forever. When you invest with 250$, you’re directly helping us
+                  save people’s lives – and making money!
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--left aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="200"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out">
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="/quantum-ai/img/brand.png"
+                    alt="deloitte"
+                    src="./assetsd/brand.png"
+                    data-loaded="true" />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href="https://preview.hashme.cc/quantum-ai/index.html#"
+                  >Delloite link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="150"
+                class="aos-init">
+                <span>2</span>
+                <p>
+                  Big corporations are the ones holding all the keys to those
+                  big paychecks. With Quantum Computing, that’s no longer true.
+                  Now YOU have the power to make a great income. The power that
+                  was once reserve for the richest among us, is now yours.
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--middle aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out">
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="/quantum-ai/img/brand2.png"
+                    alt="Bond"
+                    src="./assetsd/brand2.png"
+                    data-loaded="true" />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href="https://preview.hashme.cc/quantum-ai/index.html#"
+                  >Bond link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="300"
+                class="aos-init">
+                <span>3</span>
+                <p>
+                  QuantumAI is designed to make the world better. Elon developed
+                  this idea as a win-win. Have loans to pay off, or a mortgage
+                  to pay? Want to help people? Now you can do both.
+                </p>
+              </div>
+              <div
+                class="triangle-item triangle-item--right aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-offset="0"
+                data-aos-delay="600"
+                data-aos-duration="1000"
+                data-aos-easing="ease-out">
+                <div class="triangle-item__img">
+                  <img
+                    class="lozad"
+                    data-src="/quantum-ai/img/brand3.png"
+                    alt="Colloquy"
+                    src="./assetsd/brand3.png"
+                    data-loaded="true" />
+                </div>
+                <a
+                  class="triangle-item__link"
+                  href="https://preview.hashme.cc/quantum-ai/index.html#"
+                  >Colloquy link</a
+                >
+              </div>
+            </div>
+            <div class="solution__item">
+              <div
+                data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="350"
+                class="aos-init">
+                <span>4</span>
+                <p>
+                  A country’s economy is so fragile. As you saw in 2008, it only
+                  takes a few people at the top to ruin it. We want to stop that
+                  from happening ever again.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="solution__bottom">
+          <div class="solution__triangle">
+            <div class="wrapper"></div>
+          </div>
+          <div class="solution__bottom-wrap wrapper" id="solution">
+            <p
+              class="solution__title solution__title--white aos-init"
+              data-aos="fade-right"
+              data-aos-offset="0"
+              data-aos-duration="1500"
+              data-aos-easing="ease-out">
+              Solution
+            </p>
+            <div
+              class="solution__decor aos-init"
+              data-aos-offset="200"
+              data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-out"
+              data-aos-duration="1000"
+              data-aos-delay="100">
+              <p>
+                By using the power of Quantum Computing, you can help us take
+                the exclusivity of the top 1%, and solve 4 major problems:
+                Develop a stable, wealthy economy for all, cure poverty, level
+                the playing ground for all (not just the richest), and help you
+                make your financial dreams come true!
+              </p>
+              <span class="solution__decor-triangle"></span>
+              <span
+                class="solution__decor-triangle solution__decor-triangle--always-visible"></span>
+              <span class="solution__decor-triangle"></span>
+            </div>
+          </div>
+          <div class="solution__steps">
+            <div class="wrapper solution__steps-wrap">
+              <h2>So, what do you need to do to start?</h2>
+              <div
+                class="solution__step aos-init"
+                data-aos="slide-left"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200">
+                <span class="solution__step-num">1</span>
+                <span class="solution__step-title">Deposit</span>
+                <p class="solution__step-text">Deposit 250 Dollars.</p>
+              </div>
+              <div
+                class="solution__step aos-init"
+                data-aos="slide-right"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="250">
+                <span class="solution__step-num solution__step-num--middle"
+                  >2</span
+                >
+                <span class="solution__step-title">Pick</span>
+                <p class="solution__step-text">
+                  Pick the trades QuantumAI recommends (with the power of
+                  Quantum Computing!)
+                </p>
+              </div>
+              <div
+                class="solution__step aos-init"
+                data-aos="slide-left"
+                data-aos-easing="ease-in-out"
+                data-aos-offset="0"
+                data-aos-duration="1200"
+                data-aos-delay="500">
+                <span class="solution__step-num">3</span>
+                <span class="solution__step-title">Withdraw</span>
+                <p class="solution__step-text">
+                  Withdraw any funds in matter of hours!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section technology" id="technology">
+        <div class="wrapper technology__header">
+          <h2
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out"
+            class="aos-init">
+            What Makes Quantum Computing So Good For Investing
+          </h2>
+          <p>
+            This is the world’s first quantum computing machine; unlike your
+            home PC, this computer is smart – it makes thousands of simultaneous
+            ‘decisions’ at once. Your brain thinks one thought at a time, in a
+            sequence. Imagine if you could have thousands of thoughts at once,
+            each as clear as the other. That’s quantum computing.
+          </p>
+          <p>
+            Using that power, our quantum computing machine will help you make
+            smarter trades and make more money than you thought possible. Even
+            better, it’s designed so that you can make money and help others
+            while you profit!
+          </p>
+          <p>
+            It finds trades by analysing differentials between stock prices
+            every nano-second that stock markets are live (and makes predictions
+            even when the markets are closed, so you’ll know what’s likely to
+            happen when they re-open). Your current computer (and everyone
+            else’s) can’t match the decision speeds of this new system.
+          </p>
+          <p>
+            Sign up, and be one of the exclusive few using this technology
+            (before everyone else gets wind of it!)
+          </p>
+          .
+        </div>
+      </section>
+      <section class="section advisors" id="advisors">
+        <div class="wrapper">
+          <h2
+            class="text-white aos-init"
+            data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-duration="1500"
+            data-aos-easing="ease-out">
+            Advisors
+          </h2>
+          <div class="swiper-container js-advisors-slider">
+            <div class="advisors__wrap swiper-wrapper">
+              <div class="advisor-item swiper-slide">
+                <div
+                  class="advisor-item__wrap aos-init"
+                  data-aos="fade-right"
+                  data-aos-offset="0"
+                  data-aos-duration="1000"
+                  data-aos-easing="ease-out">
+                  <div class="advisor-item__top">
+                    <div class="advisor-item__img">
+                      <img
+                        class="lozad"
+                        data-src="img/team/c2.jpg"
+                        alt="Vladimir Tikhomirov"
+                        src="./assetsd/c2.jpg"
+                        data-loaded="true" />
+                    </div>
+                    <div class="advisor-item__info">
+                      <p class="advisor-item__name">Jeff Bezos:</p>
+                      <p class="advisor-item__position">
+                        Technology entrepreneur, investor, and philanthropist
+                      </p>
+                      <a
+                        href="https://preview.hashme.cc/quantum-ai/index.html#">
+                        <svg width="26" height="26" viewBox="0 1 24 23">
+                          <ellipse
+                            cx="2.5"
+                            cy="3.5"
+                            rx="2.48"
+                            ry="2.5"></ellipse>
+                          <path
+                            d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z"></path>
+                          <rect y="8" width="5" height="16"></rect>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="advisor-item__bottom">
+                    <p>
+                      Quantum computing is the future. I’m not exaggerating when
+                      I say it will change everything. This is the early days of
+                      quantum computing; not many people know about it, which
+                      means very few are using it. The few that are, are making
+                      incredibly wise (and profitable) decisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="advisor-item swiper-slide">
+                <div
+                  class="advisor-item__wrap aos-init"
+                  data-aos="fade-left"
+                  data-aos-offset="0"
+                  data-aos-duration="1000"
+                  data-aos-delay="250"
+                  data-aos-easing="ease-out">
+                  <div class="advisor-item__top">
+                    <div class="advisor-item__img">
+                      <img
+                        class="lozad"
+                        data-src="img/team/c1.jpg"
+                        alt="Tom Kojima"
+                        src="./assetsd/c1.jpg"
+                        data-loaded="true" />
+                    </div>
+                    <div class="advisor-item__info">
+                      <p class="advisor-item__name">Bill Gates:</p>
+                      <p class="advisor-item__position">
+                        Business magnate, investor, author, philanthropist, and
+                        humanitarian
+                      </p>
+                      <a
+                        href="https://preview.hashme.cc/quantum-ai/index.html#">
+                        <svg width="26" height="26" viewBox="0 1 24 23">
+                          <ellipse
+                            cx="2.5"
+                            cy="3.5"
+                            rx="2.48"
+                            ry="2.5"></ellipse>
+                          <path
+                            d="M12.982,10.155V8H8.014v16h4.969v-8.399c0-4.67,6.029-5.052,6.029,0V24H24V13.869C24,5.989,15.078,6.276,12.982,10.155z"></path>
+                          <rect y="8" width="5" height="16"></rect>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="advisor-item__bottom">
+                    <p>
+                      I know for a fact Elon has spent $3 billion of his own
+                      money to fund this program. Hats off to him for that –
+                      that’s $3 billion of his own money to fund a better future
+                      for everyone, and to help others make profits that’ll help
+                      him do so! It’s a win-win, and I’m very excited to see
+                      where it goes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination advisors__pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section partners">
+        <div class="wrapper wrapper--mobile">
+          <h2>Partners</h2>
+          <div
+            class="swiper-container js-partner-slider swiper-container-horizontal">
+            <div
+              class="partners__wrap swiper-wrapper"
+              style="transform: translate3d(0px, 0px, 0px)">
+              <div class="partner-item swiper-slide swiper-slide-active">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    alt="#"
+                    src="./assetsd/ll1.png"
+                    data-loaded="true" />
+                </div>
+              </div>
+              <div class="partner-item swiper-slide swiper-slide-next">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    alt="#"
+                    src="./assetsd/ll2.png"
+                    data-loaded="true" />
+                </div>
+              </div>
+              <div class="partner-item swiper-slide">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    alt="#"
+                    src="./assetsd/ll3.png"
+                    data-loaded="true" />
+                </div>
+              </div>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"></span>
+          </div>
+          <div
+            class="swiper-container js-partner-slider swiper-container-horizontal">
+            <div
+              class="partners__wrap swiper-wrapper"
+              style="transform: translate3d(0px, 0px, 0px)">
+              <div class="partner-item swiper-slide swiper-slide-active">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    alt="#"
+                    src="./assetsd/ll4.png"
+                    data-loaded="true" />
+                </div>
+              </div>
+              <div class="partner-item swiper-slide swiper-slide-next">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    alt="#"
+                    src="./assetsd/ll6.png"
+                    data-loaded="true" />
+                </div>
+              </div>
+              <div class="partner-item swiper-slide">
+                <div class="partner-item__logo">
+                  <img
+                    class="lozad"
+                    alt="#"
+                    src="./assetsd/ll5.png"
+                    data-loaded="true" />
+                </div>
+              </div>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+      <div class="wrapper">
+        <div class="container">
+          <section class="footer__content"></section>
+        </div>
+        <div class="footer__socials">
+          <div class="socials__heading">Follow our journey</div>
+          <div class="socials__list">
+            <a class="socials__link">
+              <span class="socials__icon icon--medium"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--facebook"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--linkedin"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--twitter"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--reddit"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--telegram"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--bitcoin"></span>
+            </a>
+            <a class="socials__link">
+              <span class="socials__icon icon--youtube"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <div class="bottom__col">
+            ©<span id="currentYear">2022</span> QuantumAI
+          </div>
+          <div class="bottom__col">
+            <a
+              href="javascript:void(0)"
+              data-name="policy"
+              class="bottom__link alterlink">
+              Privacy Policy</a
+            >
+            |
+            <a
+              href="javascript:void(0)"
+              data-name="terms"
+              class="bottom__link alterlink"
+              >Terms of Use</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const scrollToForm = () => {
+        document.querySelector("#form-register-lead").scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      };
+      document.querySelector("#currentYear").innerHTML =
+        new Date().getFullYear();
+    </script>
+    <script src="./assetsd/jquery-2.2.4.min.js"></script>
+    <script src="./assetsd/aos.js"></script>
+    <script src="./assetsd/axios.min.js"></script>
+    <script src="./assetsd/jquery.animateNumber.js"></script>
+    <!-- <script src="quantum-ai/trades/js/trades.js"></script> -->
+
+    <script>
+      AOS.init();
+    </script>
+    <script src="./assetsd/chunk-vendors.js"></script>
+    <script src="./assetsd/app.js"></script>
+    <div>
+      <div class="addition">
+        <div class="pop-outer">
+          <div class="pop-bg"></div>
+          <div class="pop-inner">
+            <div class="pop-close">✖</div>
+            <div class="pop-inner__in"><!----><!----><!----><!----></div>
+          </div>
+        </div>
+        <!---->
+      </div>
+    </div>
+  </body>
+</html>

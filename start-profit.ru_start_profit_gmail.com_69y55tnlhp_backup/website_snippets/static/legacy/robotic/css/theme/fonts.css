@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'futuramediumc';
+    src: url('../../fonts/futuramediumc.woff') format('woff2');
+    src: url('../../fonts/futuramediumc.woff') format('woff');
+    src: url('../../fonts/futuramediumc.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'thamesc';
+    src: url('../../fonts/thamesc.woff') format('woff2');
+    src: url('../../fonts/thamesc.woff') format('woff');
+    src: url('../../fonts/thamesc.otf') format('opentype');
+}

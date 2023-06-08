@@ -1,0 +1,103 @@
+/* button grad green */
+.btn-grad-green {
+    color: #ffffff !important;
+    background: -moz-linear-gradient(150deg, #0baf84 0%, #29e9b8 50%, #0baf84 100%); 
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0baf84), color-stop(50%, #29e9b8), color-stop(100%, #0baf84)); 
+    background: -webkit-linear-gradient(150deg, #0baf84 0%, #29e9b8 50%, #0baf84 100%); 
+    background: -o-linear-gradient(150deg, #0baf84 0%, #29e9b8 50%, #0baf84 100%); 
+    background: -ms-linear-gradient(150deg, #0baf84 0%, #29e9b8 50%, #0baf84 100%); 
+    background: linear-gradient(150deg, #0baf84 0%, #29e9b8 50%, #0BAF84 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-one', endColorstr='$color-two', GradientType=1); 
+    -webkit-transition: all 0.3s ease-in-out; 
+    -moz-transition: all 0.3s ease-in-out; 
+    -ms-transition: all 0.3s ease-in-out; 
+    -o-transition: all 0.3s ease-in-out; 
+    transition: all 0.3s ease-in-out;
+    background-size: 260% 100%;
+    background-position: right bottom;
+    border: 0;
+    line-height: 1.9;
+    border-color: transparent !important;
+}
+.btn-grad-green.active, 
+.btn-grad-green:active, 
+.btn-grad-green:focus, 
+.btn-grad-green:hover {
+    color: #ffffff; 
+    background-position: left bottom;
+}
+.btn-grad-green.btn-sm, 
+.btn-group-sm > .btn-grad-green.btn {
+    line-height: 1.8;
+}
+/* button grad green */
+
+/* red button */
+
+.btn-red{
+    color: #ffffff !important;
+    background-color: #ff0000 !important;
+    border-color: #ff0000 !important;
+}
+
+/* red button */
+
+/* blue button */
+
+.btn-blue{
+    color: #ffffff !important;
+    background-color: #112f94 !important;
+    border-color: #112f94 !important;
+}
+
+/* blue button */
+
+/* yellow button */
+
+.btn-yellow{
+    color: #000000 !important;
+    background-color: #edf258 !important;
+    border-color: #edf258 !important;
+}
+
+/* yellow button */
+
+/* blue_green button */
+
+.btn-blue_green{
+    color: #ffffff !important;
+    background-color: #009B7A !important;
+    border-color: #009B7A !important;
+}
+
+/* blue_green button */
+
+/* orange button */
+
+.btn-orange{
+    color: #ffffff !important;
+    background-color: #FF7300 !important;
+    border-color: #FF7300 !important;
+}
+
+/* orange button */
+
+/* white button */
+
+.btn-white{
+    color: #000000 !important;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+}
+
+/* white button */
+
+/* pure_orange button */
+
+.btn-pure_orange{
+    color: #ffffff !important;
+    background-color: #ff9600 !important;
+    border-color: #ff9600 !important;
+}
+
+/* pure_orange button */

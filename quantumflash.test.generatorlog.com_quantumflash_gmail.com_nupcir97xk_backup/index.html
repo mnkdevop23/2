@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <base />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Quantum Flash</title>
+    <link rel="canonical" href="https://quantumflash.test.generatorlog.com" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="stylesheet" href="intlTelInput.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="//fonts.googleapis.com/css2?family=Sarabun:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="app.css" />
+    <style type="text/css">
+      .vue-modal-resizer {
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        right: 0;
+        bottom: 0;
+        z-index: 9999999;
+        background: transparent;
+        cursor: se-resize;
+      }
+      .vue-modal-resizer::after {
+        display: block;
+        position: absolute;
+        content: "";
+        background: transparent;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #ddd;
+        border-left: 10px solid transparent;
+      }
+      .vue-modal-resizer.clicked::after {
+        border-bottom: 10px solid #369be9;
+      }
+    </style>
+    <style type="text/css">
+      .v--modal-block-scroll {
+        overflow: hidden;
+        width: 100vw;
+      }
+      .v--modal-overlay {
+        position: fixed;
+        box-sizing: border-box;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        opacity: 1;
+      }
+      .v--modal-overlay.scrollable {
+        height: 100%;
+        min-height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+      .v--modal-overlay .v--modal-background-click {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+      }
+      .v--modal-overlay .v--modal-box {
+        position: relative;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .v--modal-overlay.scrollable .v--modal-box {
+        margin-bottom: 2px;
+      }
+      .v--modal {
+        background-color: white;
+        text-align: left;
+        border-radius: 3px;
+        box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+        padding: 0;
+      }
+      .v--modal.v--modal-fullscreen {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        left: 0;
+        top: 0;
+      }
+      .v--modal-top-right {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .overlay-fade-enter-active,
+      .overlay-fade-leave-active {
+        transition: all 0.2s;
+      }
+      .overlay-fade-enter,
+      .overlay-fade-leave-active {
+        opacity: 0;
+      }
+      .nice-modal-fade-enter-active,
+      .nice-modal-fade-leave-active {
+        transition: all 0.4s;
+      }
+      .nice-modal-fade-enter,
+      .nice-modal-fade-leave-active {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+    </style>
+    <style type="text/css">
+      .vue-dialog div {
+        box-sizing: border-box;
+      }
+      .vue-dialog .dialog-flex {
+        width: 100%;
+        height: 100%;
+      }
+      .vue-dialog .dialog-content {
+        flex: 1 0 auto;
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+      }
+      .vue-dialog .dialog-c-title {
+        font-weight: 600;
+        padding-bottom: 15px;
+      }
+      .vue-dialog .dialog-c-text {
+      }
+      .vue-dialog .vue-dialog-buttons {
+        display: flex;
+        flex: 0 1 auto;
+        width: 100%;
+        border-top: 1px solid #eee;
+      }
+      .vue-dialog .vue-dialog-buttons-none {
+        width: 100%;
+        padding-bottom: 15px;
+      }
+      .vue-dialog-button {
+        font-size: 12px !important;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        cursor: pointer;
+        box-sizing: border-box;
+        line-height: 40px;
+        height: 40px;
+        color: inherit;
+        font: inherit;
+        outline: none;
+      }
+      .vue-dialog-button:hover {
+        background: rgba(0, 0, 0, 0.01);
+      }
+      .vue-dialog-button:active {
+        background: rgba(0, 0, 0, 0.025);
+      }
+      .vue-dialog-button:not(:first-of-type) {
+        border-left: 1px solid #eee;
+      }
+      body,
+      a,
+      div,
+      p,
+      span,
+      input,
+      button,
+      input::placeholder,
+      *,
+      .form .input-wrap input {
+        font-family: "Sarabun", sans-serif !important;
+      }
+      .visitors-widget-text {
+        font-weight: 300;
+      }
+      .form-heading {
+        font-weight: 700;
+      }
+      form.signup_form {
+        background: rgb(18 27 43 / 84%);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+      }
+      .form-wrapper {
+        padding: 1.5rem 0.5rem;
+      }
+      .form .input-wrap input {
+        display: block;
+        width: 100%;
+      }
+      .iti--separate-dial-code .iti__selected-flag,
+      .iti__country.iti__highlight,
+      .iti__country {
+        color: #222;
+      }
+      .btn--submit.register {
+        cursor: pointer;
+        margin-top: 25px;
+      }
+      .partners-img {
+        margin-top: 15px;
+      }
+      .form-wrapper {
+        padding: 5px 10px 15px;
+      }
+      .form .input-wrap input {
+        height: 45px !important;
+      }
+      .form-heading {
+        margin-bottom: 5px;
+      }
+    </style>
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "");
+      fbq("track", "PageView");
+    </script>
+    <noscript> </noscript>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="header">
+        <div class="container flex center just-btwn">
+          <img
+            src="qf_logo_black.png"
+            alt="logo"
+            class="logo-img"
+            loading="lazy"
+          />
+          <div class="visitors-widget flex center">
+            <div class="people-circle-wrapper flex column center just-center">
+              <span class="people-quantity">238</span>
+              <span>people</span>
+            </div>
+            <p class="visitors-widget-text">
+              are now passing<br />
+              registration
+            </p>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="section-hero">
+          <div class="container flex just-btwn">
+            <div class="hero-video-part">
+              <h1 class="main-heading">ANTI-CRISIS SOLUTIONS</h1>
+              <h4 class="main-subheading">
+                YOU'RE ONLY 3 STEPS AWAY FROM
+                <span class="text-colored">YOUR $1000 DAILY INCOME!</span>
+              </h4>
+              <div class="video-wrapper video">
+                <video
+                  src="QuantumFlash.mp4"
+                  width="100%"
+                  controls=""
+                  controlslist="nodownload"
+                  playsinline=""
+                  poster="poster.png"
+                ></video>
+                <div class="play-btn"></div>
+              </div>
+            </div>
+            <div class="hero-form-part">
+              <div class="form-wrapper form flex column just-btwn">
+                <h4 class="form-heading">FREE REGISTRATION</h4>
+                <form
+                  method="post"
+                  action="https://api.imsb.online/"
+                  class="form signup_form"
+                >
+                  <input name="campaign" value="quantumflash" type="hidden" />
+                  <input
+                    name="ext_campaign"
+                    value="quantumflash.test.generatorlog.com"
+                    type="hidden"
+                  />
+                  <input name="source" value="1" type="hidden" />
+                  <input name="affiliate" value="387" type="hidden" />
+                  <input name="cnv_id" value="1" type="hidden" />
+                  <input name="click_id" class="click_id" type="hidden" />
+                  <input name="facebookPixel" value="" type="hidden" />
+                  <div class="form__inner">
+                    <div class="form__row">
+                      <div class="input-wrap">
+                        <input
+                          type="text"
+                          name="firstName"
+                          placeholder="First Name"
+                          class="input__control"
+                          required=""
+                        />
+                      </div>
+                      <div class="input-wrap">
+                        <input
+                          type="text"
+                          name="lastName"
+                          placeholder="Last Name"
+                          class="input__control"
+                          required=""
+                        />
+                      </div>
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        type="email"
+                        required=""
+                        name="email"
+                        placeholder="Email"
+                        class="input__control"
+                      />
+                    </div>
+                    <div class="input-wrap">
+                      <input
+                        type="tel"
+                        required=""
+                        name="phonenum"
+                        placeholder="Phone"
+                        class="input__control"
+                        data-not-remember=""
+                        id="telephone"
+                        maxlength="12"
+                      />
+                      <input type="hidden" name="codeNum" />
+                    </div>
+                    <button
+                      class="btn--submit register"
+                      type="button"
+                      name="submitBtn"
+                    >
+                      Register now
+                    </button>
+                  </div>
+                </form>
+                <img
+                  src="partners.png"
+                  alt="Partners"
+                  class="partners-img"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-about">
+          <div class="container flex just-btwn">
+            <div class="about-cards-wrapper flex wrap just-btwn">
+              <div class="about-card mb-1 animated fade-in">
+                <div class="about-card-header flex center">
+                  <div class="about-card-icon">
+                    <img
+                      src="about-001.svg"
+                      alt="capital"
+                      class="about-card-icon-img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h4 class="about-card-heading">
+                    Is it really free of charge?
+                  </h4>
+                </div>
+                <p class="about-card-text">
+                  Quantum Flash aims to remove all financial requirements
+                  associated with trading. There are no signup costs, no
+                  subscription fees, or any other hidden charges that you need
+                  to worry about. The only investment you need to do is the
+                  initial deposit from 250$ into your account.
+                </p>
+              </div>
+              <div class="about-card mb-1 animated fade-in">
+                <div class="about-card-header flex center">
+                  <div class="about-card-icon">
+                    <img
+                      src="about-002.svg"
+                      alt="capital"
+                      class="about-card-icon-img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h4 class="about-card-heading">Super fast</h4>
+                </div>
+                <p class="about-card-text">
+                  The software was created using the most advanced software the
+                  trading world has ever seen. The software outgoes the markets
+                  by 0.01 seconds. And if you know anything about trading, you
+                  know this is a big deal. This "leap in time" makes the
+                  software the most consistent trading application in the world.
+                </p>
+              </div>
+              <div class="about-card animated fade-in">
+                <div class="about-card-header flex center">
+                  <div class="about-card-icon">
+                    <img
+                      src="about-003.svg"
+                      alt="capital"
+                      class="about-card-icon-img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h4 class="about-card-heading">How much can I earn?</h4>
+                </div>
+                <p class="about-card-text">
+                  All users earn at least $1,000 a day, and if you sign up,
+                  you'll also earn that much! What do I need to start earning?
+                  All you need is a computer, laptop or smartphone with internet
+                  access.
+                </p>
+              </div>
+              <div class="about-card animated fade-in">
+                <div class="about-card-header flex center">
+                  <div class="about-card-icon">
+                    <img
+                      src="about-004.svg"
+                      alt="capital"
+                      class="about-card-icon-img"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h4 class="about-card-heading">Best 2022 trading offer</h4>
+                </div>
+                <p class="about-card-text">
+                  The app has won many awards. The most recent award we have
+                  been honored with is the No.1 in the trading software category
+                  of the American Trade Association.
+                </p>
+              </div>
+            </div>
+            <div class="about-founder-wrapper flex column">
+              <div class="founder-img-wrapper">
+                <img
+                  src="elon-musk.png"
+                  alt="Founder"
+                  class="founder-img animated fade-in"
+                  loading="lazy"
+                />
+              </div>
+              <div class="founder-text-wrapper">
+                <p class="founder-text animated fade-in">
+                  QuantumFlash was developed with the support of Elon Musk ✅
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section-results">
+          <h2 class="section-heading animated fade-in">LIVE RESULTS</h2>
+          <div class="container flex just-btwn wrap">
+            <div class="result-card animated fade-in">
+              <img
+                src="result-001.png"
+                alt="Result"
+                class="result-card-img"
+                loading="lazy"
+              />
+              <h4>
+                <span class="result-number counter" data-to="100" data-stop="1"
+                  >100</span
+                >%
+              </h4>
+              <p class="result-card-text">Percent of profitable deals</p>
+            </div>
+            <div class="result-card animated fade-in">
+              <img
+                src="result-002.png"
+                alt="Result"
+                class="result-card-img"
+                loading="lazy"
+              />
+              <h4>
+                <span class="result-number counter" data-to="224" data-stop="1"
+                  >224</span
+                >
+                hours
+              </h4>
+              <p class="result-card-text">Work period</p>
+            </div>
+            <div class="result-card animated fade-in">
+              <img
+                src="result-003.png"
+                alt="Result"
+                class="result-card-img"
+                loading="lazy"
+              />
+              <h4>
+                $<span class="result-number counter" data-to="250" data-stop="1"
+                  >250</span
+                >.00
+              </h4>
+              <p class="result-card-text">Initial deposit</p>
+            </div>
+            <div class="result-card animated fade-in">
+              <img
+                src="result-004.png"
+                alt="Result"
+                class="result-card-img"
+                loading="lazy"
+              />
+              <h4>
+                $<span
+                  class="result-number counter"
+                  data-to="8240"
+                  data-stop="1"
+                  >8240</span
+                >
+              </h4>
+              <p class="result-card-text">Profit</p>
+            </div>
+          </div>
+        </section>
+        <section class="section-how-works">
+          <h2 class="section-heading animated fade-in">HOW IT WORKS?</h2>
+          <div class="container flex just-btwn wrap">
+            <div class="works-card animated fade-in">
+              <div class="works-card-header flex center">
+                <div class="works-card-number-wrapper">
+                  <img
+                    src="works-001.png"
+                    alt="Image"
+                    class="works-card-number-img"
+                    loading="lazy"
+                  />
+                  <span class="works-card-number">1</span>
+                </div>
+                <h4 class="works-card-heading">DATA COLLECTION</h4>
+              </div>
+              <p class="works-card-text">
+                We receive data from 4 million traders connected to the system,
+                as well as from 53 banks and funds.
+              </p>
+            </div>
+            <div class="works-card animated fade-in">
+              <div class="works-card-header flex center">
+                <div class="works-card-number-wrapper">
+                  <img
+                    src="works-002.png"
+                    alt="Image"
+                    class="works-card-number-img"
+                    loading="lazy"
+                  />
+                  <span class="works-card-number">2</span>
+                </div>
+                <h4 class="works-card-heading">BIG DATA</h4>
+              </div>
+              <p class="works-card-text">
+                All data creates a huge set of relevant information— Big Data.
+              </p>
+            </div>
+            <div class="works-card animated fade-in">
+              <div class="works-card-header flex center">
+                <div class="works-card-number-wrapper">
+                  <img
+                    src="works-003.png"
+                    alt="Image"
+                    class="works-card-number-img"
+                    loading="lazy"
+                  />
+                  <span class="works-card-number">3</span>
+                </div>
+                <h4 class="works-card-heading">SUPERCOMPUTER</h4>
+              </div>
+              <p class="works-card-text">
+                Big Data is processed by a supercomputer powered by artificial
+                intelligence technology.
+              </p>
+            </div>
+            <div class="works-card animated fade-in">
+              <div class="works-card-header flex center">
+                <div class="works-card-number-wrapper">
+                  <img
+                    src="works-004.png"
+                    alt="Image"
+                    class="works-card-number-img"
+                    loading="lazy"
+                  />
+                  <span class="works-card-number">4</span>
+                </div>
+                <h4 class="works-card-heading">
+                  DEAL SIGNAL ON THE FINANCIAL MARKET
+                </h4>
+              </div>
+              <p class="works-card-text">
+                After processing the data, the supercomputer sends our users a
+                calibrated trading signal.
+              </p>
+            </div>
+            <div class="works-card animated fade-in">
+              <div class="works-card-header flex center">
+                <div class="works-card-number-wrapper">
+                  <img
+                    src="works-005.png"
+                    alt="Image"
+                    class="works-card-number-img"
+                    loading="lazy"
+                  />
+                  <span class="works-card-number">5</span>
+                </div>
+                <h4 class="works-card-heading">PROFIT GAIN</h4>
+              </div>
+              <p class="works-card-text">
+                Our users make money accomplishing the transaction.
+              </p>
+            </div>
+            <div class="works-card animated fade-in">
+              <div class="works-card-header flex center">
+                <div class="works-card-number-wrapper">
+                  <img
+                    src="works-006.png"
+                    alt="Image"
+                    class="works-card-number-img"
+                    loading="lazy"
+                  />
+                  <span class="works-card-number">6</span>
+                </div>
+                <h4 class="works-card-heading">CREDIT INDEPENDENCE</h4>
+              </div>
+              <p class="works-card-text">
+                A stable income makes our users independent of loans and
+                mortgages.
+              </p>
+            </div>
+          </div>
+          <button
+            class="btn action-btn animated fade-in"
+            onclick="scrollToElem('index.html')"
+          >
+            JOIN AN INNOVATIVE EARNING PROGRAMME
+          </button>
+          <img
+            src="partners.png"
+            alt="Partners"
+            class="partners-img animated fade-in"
+            loading="lazy"
+          />
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container flex center just-btwn">
+          <p class="copyright">
+            © <span class="year">2022</span> Chain Reaction
+          </p>
+          <div class="footer-policies flex wrap center">
+            <a href="#" data-name="policy" class="alterlink">Privacy policy</a>
+            <a href="#" data-name="terms" class="alterlink">Terms of use</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div>
+      <div class="addition">
+        <div class="pop-outer">
+          <div class="pop-bg"></div>
+          <div class="pop-inner">
+            <div class="pop-close">✖</div>
+            <div class="pop-inner__in"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="main.js" defer=""></script>
+    <script src="chunk-vendors.js"></script>
+    <script src="app.js"></script>
+    <script src="intlTelInput.min.js"></script>
+    <script>
+      const input1 = document.querySelector("#telephone");
+      const phone_num1 = window.intlTelInput(input1, {
+        separateDialCode: true,
+        utilsScript: "ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        initialCountry: "auto",
+        hiddenInput: "full_ph",
+        geoIpLookup: function (success, failure) {
+          $.get("https://ipinfo.io", function () {}, "jsonp").always(function (
+            resp
+          ) {
+            var countryCode = resp.country;
+            success(countryCode);
+          });
+        },
+        placeholderNumberType: "MOBILE",
+      });
+    </script>
+    <script>
+      $("button[name=submitBtn]").on("click", function (e) {
+        $("button[name=submitBtn]").prop("disabled", true);
+        setTimeout(function () {
+          $("button[name=submitBtn]").prop("disabled", false);
+        }, 5000);
+        var formJs = $(this).parents("form");
+        var firstName = formJs.find("input[name = firstName]").val();
+        var lastName = formJs.find("input[name = lastName]").val();
+        var email = formJs.find("input[name = email]").val();
+        var telIndex = formJs.find(".iti__selected-dial-code").text();
+        var usrtel = formJs.find("input[name = phonenum]").val();
+        $("input[name = codeNum]").val(telIndex);
+        $(
+          "<style>.error::placeholder {color: red;opacity: 1;}</style>"
+        ).appendTo("head");
+        var phone_number = telIndex + usrtel;
+        var re =
+          /^(([^<>()\[\]\.,;:\s@"]+(\.[^<>()\[\]\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+        if (firstName == "") {
+          formJs.find("input[name = firstName]").addClass("error");
+          formJs
+            .find("input[name = firstName]")
+            .attr("placeholder", "Enter your name");
+          return false;
+        } else if (lastName == "") {
+          formJs.find("input[name = lastName]").addClass("error");
+          formJs
+            .find("input[name = lastName]")
+            .attr("placeholder", "Enter your surname");
+          return false;
+        } else if (email == "" || !re.test(email)) {
+          formJs.find("input[name = email]").addClass("error");
+          formJs.find("input[name = email]").val("");
+          formJs
+            .find("input[name = email]")
+            .attr("placeholder", "Enter your email");
+          return false;
+        } else if (usrtel == "") {
+          formJs.find("input[name = phonenum]").addClass("error");
+          formJs
+            .find("input[name = phonenum]")
+            .attr("placeholder", "Enter your phone");
+          return false;
+        } else {
+          $.ajax({
+            url:
+              "https://checknumber.online/api/?number=" +
+              phone_number +
+              "&key=f389d00c97c2ec5ffe03b1853238020e",
+            dataType: "json",
+            success: function (json) {
+              if (json.valid) {
+                fbq("track", "Lead");
+                fbq("track", "CompleteRegistration");
+                formJs.submit();
+              } else {
+                formJs.find("input[name = phonenum]").addClass("error");
+                formJs.find("input[name = phonenum]").val("");
+                formJs
+                  .find("input[name = phonenum]")
+                  .attr("placeholder", "Wrong phone number");
+                return false;
+              }
+            },
+          });
+        }
+      });
+    </script>
+    <center>
+      <font size="2"
+        >This is the free demo result. For a full version of this website,
+        please go to
+        <a
+          href="https://www6.waybackmachinedownloader.com/website-downloader-online/scrape-all-files/"
+          >Website Downloader</a
+        ></font
+      >
+    </center>
+  </body>
+</html>

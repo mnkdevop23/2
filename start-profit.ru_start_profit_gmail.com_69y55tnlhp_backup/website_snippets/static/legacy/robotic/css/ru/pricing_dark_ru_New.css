@@ -1,0 +1,1913 @@
+.robotic_pricing_dark_ru
+    .custom-control.custom-checkbox
+    .custom-control-input:not(:checked):not(:indeterminate)
+    ~ .custom-control-label:before {
+    background: none;
+    outline: 1px solid #4c4c4c;
+}
+
+.robotic_pricing_dark_ru
+    .custom-control.custom-checkbox
+    .custom-control-input:not(:checked):not(:indeterminate):disabled
+    ~ .custom-control-label:before {
+    background: #e2e2e0;
+    opacity: 0.25;
+}
+
+.robotic_pricing_dark_ru {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --body: white;
+    --menu: #f9f9f9;
+    --footer: #f9f9f9;
+    --primary: #00a09d;
+    --secondary: #875a7b;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f6f9f9;
+    --dark: #141f1e;
+    --alpha: #00a09d;
+    --beta: #875a7b;
+    --gamma: #5c5b80;
+    --delta: #5b899e;
+    --epsilon: #e46f78;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Roboto", "Odoo Unicode Support Noto", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.robotic_pricing_dark_ru *,
+.robotic_pricing_dark_ru *::before,
+.robotic_pricing_dark_ru *::after {
+    box-sizing: border-box;
+}
+
+.robotic_pricing_dark_ru {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: block;
+    margin: 0;
+    font-family: "Roboto", "Odoo Unicode Support Noto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: white;
+}
+
+.robotic_pricing_dark_ru h2,
+.robotic_pricing_dark_ru h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.robotic_pricing_dark_ru p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.robotic_pricing_dark_ru a {
+    color: #00a09d;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.robotic_pricing_dark_ru a:hover {
+    color: #005452;
+    text-decoration: underline;
+}
+
+.robotic_pricing_dark_ru button:not(:disabled),
+.robotic_pricing_dark_ru [type="button"]:not(:disabled),
+.robotic_pricing_dark_ru [type="reset"]:not(:disabled),
+.robotic_pricing_dark_ru [type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.robotic_pricing_dark_ru ::-webkit-file-upload-button {
+    font: inherit;
+    -webkit--webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+.robotic_pricing_dark_ru h2,
+.robotic_pricing_dark_ru h5 {
+    margin-bottom: 0.5rem;
+    font-family: "Roboto", "Odoo Unicode Support Noto", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.robotic_pricing_dark_ru h2 {
+    font-size: 1.75rem;
+}
+
+@media (max-width: 1200px) {
+    .robotic_pricing_dark_ru h2 {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
+.robotic_pricing_dark_ru h5 {
+    font-size: 1.09375rem;
+}
+
+.robotic_pricing_dark_ru .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .robotic_pricing_dark_ru .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .robotic_pricing_dark_ru .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .robotic_pricing_dark_ru .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .robotic_pricing_dark_ru .container {
+        max-width: 1140px;
+    }
+}
+
+.robotic_pricing_dark_ru .row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.robotic_pricing_dark_ru .col-12,
+.robotic_pricing_dark_ru .col-md-4,
+.robotic_pricing_dark_ru .col-lg-10,
+.robotic_pricing_dark_ru .col-lg-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.robotic_pricing_dark_ru .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .robotic_pricing_dark_ru .col-md-4 {
+        flex: 0 0 33.33333333%;
+        max-width: 33.33333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .robotic_pricing_dark_ru .col-lg-10 {
+        flex: 0 0 83.33333333%;
+        max-width: 83.33333333%;
+    }
+    .robotic_pricing_dark_ru .col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.robotic_pricing_dark_ru .was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
+.robotic_pricing_dark_ru .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #28a745;
+}
+
+.robotic_pricing_dark_ru
+    .was-validated
+    .custom-control-input:invalid:focus:not(:checked)
+    ~ .custom-control-label::before,
+.robotic_pricing_dark_ru .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #dc3545;
+}
+
+.robotic_pricing_dark_ru .btn {
+    font-family: "Roboto", "Odoo Unicode Support Noto", sans-serif;
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .robotic_pricing_dark_ru .btn {
+        transition: none;
+    }
+}
+
+.robotic_pricing_dark_ru .btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.robotic_pricing_dark_ru .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 160, 157, 0.25);
+}
+
+.robotic_pricing_dark_ru .btn:disabled {
+    opacity: 0.65;
+}
+
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #006d6b;
+    border-color: #00605e;
+}
+
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 174, 172, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #68465f;
+    border-color: #614158;
+}
+
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(153, 115, 143, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.robotic_pricing_dark_ru .btn-info:hover {
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.robotic_pricing_dark_ru .btn-info:focus {
+    box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-info:disabled {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #117a8b;
+    border-color: #10707f;
+}
+
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(58, 176, 195, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #d39e00;
+    border-color: #c69500;
+}
+
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #bd2130;
+    border-color: #b21f2d;
+}
+
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(225, 83, 97, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #d7e4e4;
+    border-color: #d0dfdf;
+}
+
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(214, 217, 218, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(56, 64, 64, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-alpha:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-alpha:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #006d6b;
+    border-color: #00605e;
+}
+
+.robotic_pricing_dark_ru .btn-alpha:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-alpha:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 174, 172, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-beta:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-beta:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #68465f;
+    border-color: #614158;
+}
+
+.robotic_pricing_dark_ru .btn-beta:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-beta:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(153, 115, 143, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-gamma:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-gamma:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #474662;
+    border-color: #41415b;
+}
+
+.robotic_pricing_dark_ru .btn-gamma:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-gamma:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(116, 116, 147, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-delta:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-delta:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #486d7e;
+    border-color: #446676;
+}
+
+.robotic_pricing_dark_ru .btn-delta:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-delta:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(116, 155, 173, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-epsilon:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-epsilon:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #dc4450;
+    border-color: #da3946;
+}
+
+.robotic_pricing_dark_ru .btn-epsilon:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-epsilon:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(232, 133, 140, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #00a09d;
+    border-color: #00a09d;
+}
+
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 160, 157, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #875a7b;
+    border-color: #875a7b;
+}
+
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(135, 90, 123, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #f6f9f9;
+    border-color: #f6f9f9;
+}
+
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(246, 249, 249, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #141f1e;
+    border-color: #141f1e;
+}
+
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(20, 31, 30, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-alpha:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-alpha:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #00a09d;
+    border-color: #00a09d;
+}
+
+.robotic_pricing_dark_ru .btn-outline-alpha:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-alpha:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 160, 157, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-beta:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-beta:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #875a7b;
+    border-color: #875a7b;
+}
+
+.robotic_pricing_dark_ru .btn-outline-beta:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-beta:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(135, 90, 123, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-gamma:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-gamma:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #5c5b80;
+    border-color: #5c5b80;
+}
+
+.robotic_pricing_dark_ru .btn-outline-gamma:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-gamma:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(92, 91, 128, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-delta:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-delta:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #5b899e;
+    border-color: #5b899e;
+}
+
+.robotic_pricing_dark_ru .btn-outline-delta:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-delta:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(91, 137, 158, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-epsilon:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-epsilon:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #e46f78;
+    border-color: #e46f78;
+}
+
+.robotic_pricing_dark_ru .btn-outline-epsilon:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-epsilon:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(228, 111, 120, 0.5);
+}
+
+.robotic_pricing_dark_ru .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #21fffb;
+}
+
+.robotic_pricing_dark_ru .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    color: #fff;
+    background-color: #54fffc;
+    border-color: #54fffc;
+}
+
+.robotic_pricing_dark_ru .close:not(:disabled):not(.disabled):hover,
+.robotic_pricing_dark_ru .close:not(:disabled):not(.disabled):focus {
+    opacity: 0.75;
+}
+
+.robotic_pricing_dark_ru {
+    background-color: #141f1e !important;
+    color: #fff;
+}
+
+.robotic_pricing_dark_ru .o_default_snippet_text {
+    color: #fff;
+}
+
+.robotic_pricing_dark_ru .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.robotic_pricing_dark_ru .h-100 {
+    height: 100% !important;
+}
+
+.robotic_pricing_dark_ru .mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.robotic_pricing_dark_ru .mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.robotic_pricing_dark_ru .mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.robotic_pricing_dark_ru .py-1 {
+    padding-top: 0.25rem !important;
+}
+
+.robotic_pricing_dark_ru .py-1 {
+    padding-bottom: 0.25rem !important;
+}
+
+.robotic_pricing_dark_ru .px-4 {
+    padding-right: 1.5rem !important;
+}
+
+.robotic_pricing_dark_ru .px-4 {
+    padding-left: 1.5rem !important;
+}
+
+.robotic_pricing_dark_ru .mx-auto {
+    margin-right: auto !important;
+}
+
+.robotic_pricing_dark_ru .mx-auto {
+    margin-left: auto !important;
+}
+
+.robotic_pricing_dark_ru .text-center {
+    text-align: center !important;
+}
+
+.robotic_pricing_dark_ru .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.robotic_pricing_dark_ru,
+.robotic_pricing_dark_ru {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.robotic_pricing_dark_ru .pt0 {
+    padding-top: 0px !important;
+}
+
+.robotic_pricing_dark_ru .pb56 {
+    padding-bottom: 56px !important;
+}
+
+.robotic_pricing_dark_ru .pt104 {
+    padding-top: 104px !important;
+}
+
+.robotic_pricing_dark_ru {
+    direction: ltr;
+}
+
+.robotic_pricing_dark_ru ::-moz-selection {
+    background: rgba(150, 150, 220, 0.3);
+}
+
+.robotic_pricing_dark_ru ::selection {
+    background: rgba(150, 150, 220, 0.3);
+}
+
+.robotic_pricing_dark_ru {
+    --is-alpha-primary: true;
+    --is-beta-secondary: true;
+    --header-font-size: 0.875rem;
+    --font-number: 1;
+    --headings-font-number: 1;
+    --navbar-font-number: 1;
+    --buttons-font-number: 1;
+    --body: white;
+    --text: #212529;
+    --h1: #212529;
+    --h2: #212529;
+    --h3: #212529;
+    --h4: #212529;
+    --h5: #212529;
+    --h6: #212529;
+    --logo-height: 2.3125rem;
+    --number-of-fonts: 6;
+}
+
+.robotic_pricing_dark_ru h4 {
+    font-size: 1.3125rem;
+}
+
+@media (max-width: 400px) {
+    .robotic_pricing_dark_ru,
+    .robotic_pricing_dark_ru .row {
+        height: auto !important;
+    }
+}
+
+.robotic_pricing_dark_ru {
+    direction: ltr;
+}
+
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="edit"]:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="edit"]:not(:disabled):not(.disabled).active,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="translate"]:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="translate"]:not(:disabled):not(.disabled).active,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a.css_edit_dynamic:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a.css_edit_dynamic:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #5f5e97;
+    border-color: #5a598f;
+}
+
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="edit"]:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="edit"]:not(:disabled):not(.disabled).active:focus,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="translate"]:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a[data-action="translate"]:not(:disabled):not(.disabled).active:focus,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a.css_edit_dynamic:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    #oe_main_menu_navbar
+    .o_menu_systray
+    > li
+    > a.css_edit_dynamic:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(144, 143, 185, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #5f5e97;
+    border-color: #5a598f;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(144, 143, 185, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #dedddd;
+    border-color: #d7d7d7;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(215, 216, 216, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #dedddd;
+    border-color: #d7d7d7;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(215, 216, 216, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #328851;
+    border-color: #2f7e4b;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(93, 185, 126, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #517e8d;
+    border-color: #4d7784;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(128, 168, 181, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #ec971f;
+    border-color: #ea9214;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(209, 153, 72, 0.5);
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #df2c45;
+    border-color: #dd213c;
+}
+
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .modal.o_technical_modal
+    .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(234, 113, 130, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #5f5e97;
+    border-color: #5a598f;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(144, 143, 185, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #dedddd;
+    border-color: #d7d7d7;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-secondary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(215, 216, 216, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #dedddd;
+    border-color: #d7d7d7;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-link:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(215, 216, 216, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #328851;
+    border-color: #2f7e4b;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-success:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(93, 185, 126, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #517e8d;
+    border-color: #4d7784;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-info:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(128, 168, 181, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #ec971f;
+    border-color: #ea9214;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-warning:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(209, 153, 72, 0.5);
+}
+
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .o_ace_view_editor .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #df2c45;
+    border-color: #dd213c;
+}
+
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru
+    .o_ace_view_editor
+    .btn:not(.o_btn_preview).btn-danger:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(234, 113, 130, 0.5);
+}
+
+@media screen and (max-width: 1080px) {
+    .robotic_pricing_dark_ru .ribbon {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.robotic_pricing_dark_ru {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #4cbd89;
+    --secondary: #8f9397;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f7f8f9;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.robotic_pricing_dark_ru *,
+.robotic_pricing_dark_ru *::before,
+.robotic_pricing_dark_ru *::after {
+    box-sizing: border-box;
+}
+
+.robotic_pricing_dark_ru {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: block;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #8f9397;
+    text-align: left;
+    background-color: #fff;
+}
+
+.robotic_pricing_dark_ru h2,
+.robotic_pricing_dark_ru h5 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.robotic_pricing_dark_ru p {
+    margin-top: 0;
+    margin-bottom: 1.3rem;
+}
+
+.robotic_pricing_dark_ru a {
+    color: #4cbd89;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.robotic_pricing_dark_ru a:hover {
+    color: #3a9c6f;
+    text-decoration: none;
+}
+
+.robotic_pricing_dark_ru button:not(:disabled),
+.robotic_pricing_dark_ru [type="button"]:not(:disabled),
+.robotic_pricing_dark_ru [type="reset"]:not(:disabled),
+.robotic_pricing_dark_ru [type="submit"]:not(:disabled) {
+    cursor: pointer;
+}
+
+.robotic_pricing_dark_ru ::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+.robotic_pricing_dark_ru h2,
+.robotic_pricing_dark_ru h5 {
+    margin-bottom: 0.5rem;
+    font-family: "futuramediumc", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #343a40;
+}
+
+.robotic_pricing_dark_ru h2 {
+    font-size: 1.75rem;
+}
+
+@media (max-width: 1200px) {
+    .robotic_pricing_dark_ru h2 {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
+.robotic_pricing_dark_ru h5 {
+    font-size: 1.09375rem;
+}
+
+.robotic_pricing_dark_ru .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1200px) {
+    .robotic_pricing_dark_ru .container {
+        max-width: 1200px;
+    }
+}
+
+.robotic_pricing_dark_ru .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+@media (max-width: 1100px) {
+    .robotic_pricing_dark_ru .row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+}
+
+.robotic_pricing_dark_ru .col-12,
+.robotic_pricing_dark_ru .col-md-4,
+.robotic_pricing_dark_ru .col-lg-10,
+.robotic_pricing_dark_ru .col-lg-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.robotic_pricing_dark_ru .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .robotic_pricing_dark_ru .col-md-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .robotic_pricing_dark_ru .col-lg-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+    .robotic_pricing_dark_ru .col-lg-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.robotic_pricing_dark_ru .was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before,
+.robotic_pricing_dark_ru .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #28a745;
+}
+
+.robotic_pricing_dark_ru
+    .was-validated
+    .custom-control-input:invalid:focus:not(:checked)
+    ~ .custom-control-label::before,
+.robotic_pricing_dark_ru .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #dc3545;
+}
+
+.robotic_pricing_dark_ru .btn {
+    display: inline-block;
+    font-weight: 500;
+    color: #8f9397;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    border-radius: 3px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .robotic_pricing_dark_ru .btn {
+        transition: none;
+    }
+}
+
+.robotic_pricing_dark_ru .btn:hover {
+    color: #8f9397;
+    text-decoration: none;
+}
+
+.robotic_pricing_dark_ru .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.robotic_pricing_dark_ru .btn:disabled {
+    opacity: 0.65;
+}
+
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #3a9c6f;
+    border-color: #369368;
+}
+
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(103, 199, 155, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #757a7e;
+    border-color: #6f7377;
+}
+
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-secondary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(160, 163, 167, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-success:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(72, 180, 97, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.robotic_pricing_dark_ru .btn-info:hover {
+    color: #fff;
+    background-color: #138496;
+    border-color: #117a8b;
+}
+
+.robotic_pricing_dark_ru .btn-info:focus {
+    box-shadow: 0 0 0 0 rgba(58, 176, 195, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-info:disabled {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #117a8b;
+    border-color: #10707f;
+}
+
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-info:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(58, 176, 195, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #d39e00;
+    border-color: #c69500;
+}
+
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-warning:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(222, 170, 12, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #bd2130;
+    border-color: #b21f2d;
+}
+
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-danger:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(225, 83, 97, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #dadfe3;
+    border-color: #d3d8de;
+}
+
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-light:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(215, 216, 218, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #1d2124;
+    border-color: #171a1d;
+}
+
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-dark:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(82, 88, 93, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #4cbd89;
+    border-color: #4cbd89;
+}
+
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-primary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(76, 189, 137, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #8f9397;
+    border-color: #8f9397;
+}
+
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(143, 147, 151, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-success:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-info:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(23, 162, 184, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-warning:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-danger:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled).active {
+    color: #212529;
+    background-color: #f7f8f9;
+    border-color: #f7f8f9;
+}
+
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-light:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(247, 248, 249, 0.5);
+}
+
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled):active,
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled).active {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled):active:focus,
+.robotic_pricing_dark_ru .btn-outline-dark:not(:disabled):not(.disabled).active:focus {
+    box-shadow: 0 0 0 0 rgba(52, 58, 64, 0.5);
+}
+
+.robotic_pricing_dark_ru .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+    border-color: #4cbd89;
+}
+
+.robotic_pricing_dark_ru .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    color: #fff;
+    background-color: #ceeddf;
+    border-color: #ceeddf;
+}
+
+.robotic_pricing_dark_ru .close:not(:disabled):not(.disabled):hover,
+.robotic_pricing_dark_ru .close:not(:disabled):not(.disabled):focus {
+    opacity: 0.75;
+}
+
+.robotic_pricing_dark_ru {
+    background-color: #343a40 !important;
+}
+
+.robotic_pricing_dark_ru .shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.robotic_pricing_dark_ru .h-100 {
+    height: 100% !important;
+}
+
+.robotic_pricing_dark_ru .mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.robotic_pricing_dark_ru .mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.robotic_pricing_dark_ru .mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+@media (max-width: 768px) {
+    .robotic_pricing_dark_ru .mb-5 {
+        margin-bottom: 0rem !important;
+    }
+}
+
+.robotic_pricing_dark_ru .py-1 {
+    padding-top: 0.25rem !important;
+}
+
+.robotic_pricing_dark_ru .py-1 {
+    padding-bottom: 0.25rem !important;
+}
+
+.robotic_pricing_dark_ru .px-4 {
+    padding-right: 1.5rem !important;
+}
+
+.robotic_pricing_dark_ru .px-4 {
+    padding-left: 1.5rem !important;
+}
+
+.robotic_pricing_dark_ru .mx-auto {
+    margin-right: auto !important;
+}
+
+.robotic_pricing_dark_ru .mx-auto {
+    margin-left: auto !important;
+}
+
+.robotic_pricing_dark_ru .text-center {
+    text-align: center !important;
+}
+
+.robotic_pricing_dark_ru .btn {
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 6px;
+    outline: 0;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.robotic_pricing_dark_ru {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.robotic_pricing_dark_ru a {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.robotic_pricing_dark_ru *:focus {
+    outline: none !important;
+}
+
+.robotic_pricing_dark_ru ::selection {
+    color: #fff;
+    background: #4cbd89;
+}
+
+.robotic_pricing_dark_ru ::-moz-selection {
+    color: #fff;
+    background: #4cbd89;
+}
+
+.robotic_pricing_dark_ru .title {
+    padding: 0 0 30px;
+}
+
+.robotic_pricing_dark_ru .title h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.robotic_pricing_dark_ru .title.text-center p {
+    padding: 0 80px;
+}
+
+@media (max-width: 1199.98px) {
+    .robotic_pricing_dark_ru .container {
+        width: 94%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .robotic_pricing_dark_ru .title h2 {
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .robotic_pricing_dark_ru .title p {
+        padding: 0px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .robotic_pricing_dark_ru .container {
+        width: 100% !important;
+        padding: 0 15px !important;
+    }
+}
+
+.robotic_pricing_dark_ru * {
+    color: #fff;
+}
+
+.robotic_pricing_dark_ru .shadow {
+    box-shadow: 0px 0px 30px rgba(83, 88, 93, 0.15) !important;
+}
+
+.robotic_pricing_dark_ru {
+    padding-top: 5rem;
+    padding-bottom: 3.8rem;
+}
+
+@media (max-width: 991.98px) {
+    .robotic_pricing_dark_ru {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .robotic_pricing_dark_ru {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    .robotic_pricing_dark_ru .btn {
+        max-width: 200px !important;
+        margin: auto !important;
+    }
+}
+
+.robotic_pricing_dark_ru {
+    text-align: center;
+}
+
+.robotic_pricing_dark_ru .pricing-box {
+    border: 1px solid #f0f1f3;
+    padding: 50px;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.robotic_pricing_dark_ru .pricing-box h5 {
+    font-weight: 400;
+}
+
+.robotic_pricing_dark_ru .pricing-box p {
+    margin: 20px 0;
+}
+
+.robotic_pricing_dark_ru .pricing-box:hover {
+    border-color: transparent;
+    box-shadow: 0px 0px 40px rgba(83, 88, 93, 0.1);
+}
+
+.robotic_pricing_dark_ru .pricing-box {
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.robotic_pricing_dark_ru .pricing-box:hover {
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.robotic_pricing_dark_ru .ribbon {
+    position: absolute;
+    left: -9px;
+    top: -8px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    text-align: left;
+}
+
+.robotic_pricing_dark_ru .ribbon span {
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    line-height: 11px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    width: 101px;
+    display: block;
+    background: -moz-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #97c74e), color-stop(100%, #2ab9a5));
+    background: -webkit-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+    background: -o-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+    background: -ms-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+    background: linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color-one', endColorstr='$color-two', GradientType=1);
+    box-shadow: 0 1px 5px -5px black;
+    position: absolute;
+    top: 13px;
+    left: -22px;
+}
+
+.robotic_pricing_dark_ru .ribbon span::before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid #343a40;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #343a40;
+}
+
+.robotic_pricing_dark_ru .ribbon span::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-right: 3px solid transparent;
+    border-left: 3px solid #343a40;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid #343a40;
+}
+
+@media (max-width: 991.98px) {
+    .robotic_pricing_dark_ru .pricing-box {
+        padding: 20px;
+    }
+}
+
+.robotic_pricing_dark_ru ::selection {
+    color: #fff;
+    background: #17a2b8;
+}
+
+.robotic_pricing_dark_ru {
+    overflow-x: hidden;
+}
+
+@media (max-width: 1080px) {
+    .pricing-box {
+        display: flex;
+        flex-direction: column;
+    }
+    .robotic_pricing_dark_ru h5.mb-3 {
+        margin-bottom: 0px !important;
+    }
+    .robotic_pricing_dark_ru .pricing-box p {
+        margin: 20px 0;
+        flex-grow: 1;
+    }
+
+    .robotic_banner_ru .row {
+        margin-right: -15px !important;
+        margin-left: -15px !important;
+    }
+}
+@media (min-width: 768px) {
+    .robotic_pricing_dark_ru .col-md-4 {
+        flex: 0 0 31%;
+        max-width: 41%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .robotic_pricing_dark_ru .mb-3.o_default_snippet_text {
+        min-height: 46px;
+    }
+
+    .robotic_pricing_dark_ru p.o_default_snippet_text {
+        flex-grow: 1;
+    }
+
+    .robotic_banner_ru .row {
+        margin-right: -15px !important;
+        margin-left: -15px !important;
+    }
+
+    .robotic_pricing_dark_ru .row {
+        justify-content: space-between !important;
+    }
+}
+
+@media (max-width: 464px) {
+    section.robotic_pricing_dark_ru {
+        padding-top: 62px !important;
+    }
+    section.robotic_pricing_dark_ru .feature-box .feature-box-title {
+        margin-top: 22px !important;
+        margin-bottom: 22px !important;
+    }
+}
+
+@media (max-width: 410px) {
+    .feature-box h3.feature-box-title {
+        margin-top: 17px !important;
+        margin-bottom: 22px !important;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 464px) {
+    .title.text-center h2 {
+        font-size: 30px !important;
+    }
+    .title.text-center h2 font {
+        font-size: 30px !important;
+    }
+    .robotic_pricing_dark_ru .row .col-md-4 {
+        max-width: 31.33333% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+    .robotic_pricing_dark_ru .row .col-md-4 h4.o_default_snippet_text {
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 464px) {
+    .pricing-box h5 span {
+        font-size: 32px !important;
+    }
+    .robotic_pricing_dark_ru .pricing-box p {
+        margin-top: 0 !important;
+    }
+    section.robotic_pricing_dark_ru {
+        padding-bottom: 0 !important;
+    }
+}
+
+section[data-snippet="s_pricing_dark_New"] {
+    background-color: #13205f !important;
+}
+
+section[data-snippet="s_pricing_dark_New"] .pricing-box {
+    background-color: #040d3d !important;
+}
+
+section[data-snippet="s_pricing_dark_New"] .pricing-box h5 span {
+    color: #2246ee !important;
+}
+
+section[data-snippet="s_pricing_dark_New"] .pricing-box a.btn.btn-info {
+    background-color: #1a2d88 !important;
+    border-color: #1a2d88 !important;
+}
+
+section[data-snippet="s_pricing_dark_New"] .pricing-box div.ribbon span {
+    background-color: #edf259 !important;
+    color: #010101 !important;
+}
+
+section[data-snippet="s_pricing_dark_New"] .pricing-box h4 {
+    color: #edf259 !important;
+}

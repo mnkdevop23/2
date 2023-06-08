@@ -1,0 +1,347 @@
+.iti__flag-container {
+    color: #000;
+}
+
+#preloader>p {
+    display: none;
+}
+
+.loading-text {
+    color: black !important;
+}
+
+.dialog-body {
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.success-message {
+    color: black !important;
+    font-weight: bold !important;
+}
+
+#preloader_preload {
+    display: block;
+    position: fixed;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    background: #081047 url(../img/svg/puff.svg) center center no-repeat;
+    background-size: 41px;
+}
+
+.register-form {
+    position: relative;
+}
+
+.loader {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    z-index: 99999999;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body.loader {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cssload-thecube {
+    width: 73px;
+    height: 73px;
+    margin: 0 auto;
+    margin-top: 49px;
+    position: relative;
+    transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+}
+
+.cssload-thecube .cssload-cube {
+    position: relative;
+    transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+}
+
+.cssload-thecube .cssload-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+
+.cssload-thecube .cssload-cube:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43, 160, 199);
+    animation: cssload-fold-thecube 2.76s infinite linear both;
+    -o-animation: cssload-fold-thecube 2.76s infinite linear both;
+    -ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+    -webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+    -moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+    transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+}
+
+.cssload-thecube .cssload-c2 {
+    transform: scale(1.1) rotateZ(90deg);
+    -o-transform: scale(1.1) rotateZ(90deg);
+    -ms-transform: scale(1.1) rotateZ(90deg);
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    -moz-transform: scale(1.1) rotateZ(90deg);
+}
+
+.cssload-thecube .cssload-c3 {
+    transform: scale(1.1) rotateZ(180deg);
+    -o-transform: scale(1.1) rotateZ(180deg);
+    -ms-transform: scale(1.1) rotateZ(180deg);
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    -moz-transform: scale(1.1) rotateZ(180deg);
+}
+
+.cssload-thecube .cssload-c4 {
+    transform: scale(1.1) rotateZ(270deg);
+    -o-transform: scale(1.1) rotateZ(270deg);
+    -ms-transform: scale(1.1) rotateZ(270deg);
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    -moz-transform: scale(1.1) rotateZ(270deg);
+}
+
+.cssload-thecube .cssload-c2:before {
+    animation-delay: 0.35s;
+    -o-animation-delay: 0.35s;
+    -ms-animation-delay: 0.35s;
+    -webkit-animation-delay: 0.35s;
+    -moz-animation-delay: 0.35s;
+}
+
+.cssload-thecube .cssload-c3:before {
+    animation-delay: 0.69s;
+    -o-animation-delay: 0.69s;
+    -ms-animation-delay: 0.69s;
+    -webkit-animation-delay: 0.69s;
+    -moz-animation-delay: 0.69s;
+}
+
+.cssload-thecube .cssload-c4:before {
+    animation-delay: 1.04s;
+    -o-animation-delay: 1.04s;
+    -ms-animation-delay: 1.04s;
+    -webkit-animation-delay: 1.04s;
+    -moz-animation-delay: 1.04s;
+}
+
+@keyframes cssload-fold-thecube {
+
+    0%,
+    10% {
+        transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cssload-fold-thecube {
+
+    0%,
+    10% {
+        -webkit-transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+
+    25%,
+    75% {
+        -webkit-transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+
+    90%,
+    100% {
+        -webkit-transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+.modal_phone {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+    outline: 0;
+    padding-right: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #000;
+}
+
+.modal_phone.open_phone {
+    display: flex;
+}
+
+.modal-open_phone {
+    overflow: hidden;
+}
+
+.modal-dialog_phone {
+    position: relative;
+    width: 100%;
+    max-width: 32rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.modal-content_phone {
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+
+.modal-header_phone {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.modal-header_phone {
+    justify-content: space-between;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.modal-body_phone {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.modal-title_phone {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.close-button_phone {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.5;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    margin: -1rem -1rem -1rem auto;
+}
+
+button[type=submit] {
+    font-family: Montserrat, sans-serif;
+    display: block;
+    line-height: 1.2;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 28px;
+    color: #fff;
+    min-height: 50px;
+    width: 100%;
+    /* background: #00b61f; */
+    font-weight: 500;
+    font-size: 1.5em;
+    border-color: #00b61f;
+    box-shadow: none;
+    margin-top: 20px;
+}
+
+input:not([type=checkbox]) {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+form {
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+input[type=tel] {
+    margin-bottom: 0 !important;
+}
+
+.vti__dropdown-item {
+    color: #000;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Quantum System</title>
+	<link rel="canonical" href="http://quantumsystemsportal.uniqueoffersstart.com" />
+    <link href="Content/css.css" rel="stylesheet" />
+    <link href="Content/css_custom.css" rel="stylesheet" />
+    <script src="bundles/modernizr.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="releases/v5.8.1/css/all.css" >
+     <link rel="stylesheet" href="https://cdn.unitedmarkets.cc/build/bundle.css?v=1637321581">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic-ext"
+        rel="preload" as="style" onload="this.rel='stylesheet'">
+    
+</head>
+<body class="eupopup eupopup-bottom eupopup-style-compact">
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <img src="Content/images/logo.png" class="logo text-center" alt="Quantum System" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper data mb2rem">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <div class="volume"
+                            onclick="document.querySelector('video').muted = false; this.style.display = 'none.html'">
+                            <i class="fas fa-5x fa-volume-up unmute-btn"></i>
+                            <p>Включить звук</p>
+                        </div>
+                        <video width="620" height="370" oncontextmenu="return false;" autoplay muted>
+                            <source src="Content/videos/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                <h2 class="nomargin">1 ШАГ : <span>Создайте учетную запись Quantum System прямо сейчас</span></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="hidden-xs col-sm-1 col-md-offset-1  col-lg-offset-2 arr-left">
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+                <div id="regFormContent_regForm388c75c2ec35427fb4f7da7849aee085">
+                    <div id="form-register-lead"></div>
+                </div>
+            </div>
+            <div class="hidden-xs col-sm-1 arr-right">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center verification">
+                <img src="Content/images/trusted-1.png" class="trusted" alt="Quantum System Verified" />
+                <img src="Content/images/trusted-2.png" class="trusted" alt="Quantum System Verified" />
+                <img src="Content/images/trusted-3.png" class="trusted" alt="Quantum System Verified" />
+                <img src="Content/images/trusted-4.png" class="trusted" alt="Quantum System Verified" />
+                <img src="Content/images/trusted-5.png" class="trusted" alt="Quantum System Verified" />
+            </div>
+        </div>
+    <script src="bundles/jquery.js"></script>
+    <script src="bundles/intlTelInput-jquery.min.js"></script>
+    <script src="bundles/utils.js"></script>
+    <script src="bundles/jquery.mask.min.js"></script>
+<script src="bundles/bootstrap.js"></script>
+<script src="npm/sweetalert2_11.js"></script>
+<script>
+    $('form').submit(function(event) {
+    event.preventDefault();
+    $('.button').prop('disabled', true);
+    function funcSuccess(result) {
+        var json = JSON.parse(result);
+        console.log(json);
+        if (json['message'] === 'phone') {
+            $('.button').prop('disabled', false);
+            Swal.fire({
+                title:  '<span style="font-size:30px">Введите корректный номер телефона</span>',
+                html: '<span style="font-size:24px">Вы ввели: '+ json['debug'] +'</span>',
+                icon: 'error',
+                confirmButtonText: "Ok",
+            })
+        }else if (json['result'] === 'success') {
+            $('.button').prop('disabled', false);
+            Swal.fire({
+                title:  '<span style="font-size:30px">Заявка на бесплатный доступ подана! Ожидайте звонка оператора</span>',
+                html: '<span style="font-size:24px">Если вы не возьмете трубку, Доступ будет аннулирован</span>',
+                icon: 'success',
+                confirmButtonText: "Я ОЖИДАЮ ЗВОНОК",
+            })
+            ym(90914841,'reachGoal','lead');
+            window.location.href = json['redirect_url']; 
+        } else {
+            Swal.fire({
+                title: '<span style="font-size:30px">Ошибка. Вы превысили максимальное количество попыток получить доступ.</span>',
+                html: '',
+                icon: 'error',
+                confirmButtonText: 'Ok',
+            })
+        }
+    }
+    var data = new FormData(this);
+    let ip = window.ip;
+    data.append('ip', ip);
+    $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: data,
+        contentType: false,
+        dataType: "html",
+        cache: false,
+        processData: false,
+        success: funcSuccess
+    });
+});
+</script>
+    <script src="bundles/main.js"></script>
+    <script defer="" src="https://cdn.unitedmarkets.cc/build/bundle.js?v=1637321581"></script>
+    <link rel="stylesheet" href="build/css/intlTelInput.min.css">
+</body>
+</html>

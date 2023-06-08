@@ -1,0 +1,126 @@
+body{
+    color: #fff;
+    font:16px 'Open Sans',Helvetica,Arial,sans-serif;
+    line-height:1;  position:relative;
+
+}
+.form-group{
+    position:relative;
+}
+label.control-label {display:none;}
+
+.form-control::-webkit-input-placeholder{
+    color: rgba(0,0,0,.54);
+    opacity:1
+}
+.form-control::-moz-placeholder{
+    color: rgba(0,0,0,.54);
+    opacity:1
+}
+.form-control:-moz-placeholder{
+    color: rgba(0,0,0,.54);
+    opacity:1
+}
+.form-control:-ms-input-placeholder{
+    color: rgba(0,0,0,.54);
+    opacity:1
+}
+.form-control:input-placeholder{
+    color: rgba(0,0,0,.54);
+    opacity:1
+}
+.form-control:focus::-webkit-input-placeholder{
+    color:transparent
+}
+.form-control:focus::-moz-placeholder{
+    color:transparent
+}
+.form-control:focus:-moz-placeholder{
+    color:transparent
+}
+.form-control:focus:-ms-input-placeholder{
+    color:transparent
+}
+input.form-control,select.form-control{
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    vertical-align: middle;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
+}
+
+
+
+input.form-control[type=text]{
+    text-transform:capitalize
+}
+
+
+#country{
+    display:none
+}
+.intl-tel-input input,.intl-tel-input input[type=text],.intl-tel-input input[type=tel]{
+    position:relative;
+    z-index:0;
+    margin-top:0!important;
+    margin-bottom:15px!important;
+    padding-right:0;
+    margin-right:0
+}
+.checkbox{
+    display:none
+}
+#formwork .btn{
+    font-family: Montserrat,sans-serif;
+    display: block;
+    line-height: 1.2;
+    height: auto;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 28px;
+    color: #fff;
+    min-height: 50px;
+    width: 100%;
+    background: #00b61f;
+    font-weight: 500;
+    font-size: 1.5em;
+    border-color: #00b61f;
+    box-shadow: none;
+    margin-top: 20px;
+}
+#formwork .btn:hover {
+    background-color:#00b61f;border-color:#00b61f;
+}
+#formwork .btn:active:hover {
+    background-color:#00b61f;border-color:#00b61f;
+    outline: 0;
+}
+
+.agree-checkbox a {
+    color:#fff;
+}
+#formwork>div:nth-child(8){display:flex}
+#formwork>div:nth-child(8)>div:nth-child(2){width:100%}#formwork>div:nth-child(8)>div:nth-child(1){width:100%;margin-right:7px}
